@@ -11,7 +11,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    //added comment to test git
     private Spinner productTypeSpinner;
     private Spinner productSpinner;
     private Spinner paymentSpinner;
