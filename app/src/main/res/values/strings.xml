@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name"/>
+    <string name="product_hint">Select a product type</string>
+    <string-array name="product_array">
+        <item>Select a product type</item>
+        <item>Headphone</item>
+        <item>Laptop</item>
+        <item>Mobile</item>
+    </string-array>
+
+    <string name="payment_hint">Select a payment method</string>
+    <string-array name="payment_array">
+        <item>Select a payment method</item>
+        <item>Credit Card</item>
+        <item>PayPal</item>
+        <item>Cash on Delivery</item>
+    </string-array>
+
+    <string-array name="produc_array">
+        <item>Select a product type first</item>
+    </string-array>
+
+    <string name="delivery_hint">Select delivery type</string>
+    <string-array name="delivery_array">
+        <item>Select delivery type</item>
+        <item>Express Shipping</item>
+        <item>Standard Shipping</item>
+        <item>Same-day Delivery</item>
+        <item>Drone Delivery</item>
+    </string-array>
+</resources>
