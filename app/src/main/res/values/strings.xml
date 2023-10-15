@@ -21,6 +21,10 @@
     </string-array>
 
     <string name="delivery_hint">Select delivery type</string>
+    <string name="cart_logo_desc">cart logo</string>
+    <string name="main_label">Welcome To Andrazon</string>
+    <string name="btn_text">Order now</string>
+    <string name="result_label">--Your result will show here--</string>
     <string-array name="delivery_array">
         <item>Select delivery type</item>
         <item>Express Shipping</item>

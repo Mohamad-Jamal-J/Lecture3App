@@ -16,9 +16,8 @@ public class MainActivity extends AppCompatActivity {
     private Spinner productSpinner;
     private Spinner paymentSpinner;
     private Spinner deliverySpinner;
-    private Button orderButton;
     private TextView resultTextView;
-    private AndrozonDB androzonDB = new AndrozonDB();
+    private final AndrozonDB ANDROZON_DB = new AndrozonDB();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         productSpinner = findViewById(R.id.productSpinner);
         paymentSpinner = findViewById(R.id.paymentSpinner);
         deliverySpinner = findViewById(R.id.deliverySpinner);
-        orderButton = findViewById(R.id.orderButton);
+        Button orderButton = findViewById(R.id.orderButton);
         resultTextView = findViewById(R.id.resultTextView);
         // Set up the button click listener
         orderButton.setOnClickListener(click -> {
@@ -49,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
                 res += "Please choose a payment method.";
             if (res.isEmpty()){
                 // If all are selected, show the result
-                res = "You ordered: " + selectedProductType +
-                        "\nproduct details: " + selectedProduct +
-                        "\nyour payment method: " + selectedPayment +
-                        "\ndelivery type: " + selectedDelivery + ".";
+                res = "You ordered:\n\n-" + selectedProductType +
+                        "\n\n-product details: " + selectedProduct +
+                        "\n\n-your payment method: " + selectedPayment +
+                        "\n\n-delivery type: " + selectedDelivery + ".";
             }
             resultTextView.setText(res);
         });
@@ -66,13 +65,13 @@ public class MainActivity extends AppCompatActivity {
                 String[] productOptions;
                 switch (selectedProductType) {
                     case "Mobile":
-                        productOptions = androzonDB.getMobilesAsStringArray();
+                        productOptions = ANDROZON_DB.getMobilesAsStringArray();
                         break;
                     case "Laptop":
-                        productOptions = androzonDB.getLaptopsAsStringArray();
+                        productOptions = ANDROZON_DB.getLaptopsAsStringArray();
                         break;
                     case "Headphone":
-                        productOptions = androzonDB.getHeadphonesAsStringArray();
+                        productOptions = ANDROZON_DB.getHeadphonesAsStringArray();
                         break;
                     default:
                         // Default to an empty array

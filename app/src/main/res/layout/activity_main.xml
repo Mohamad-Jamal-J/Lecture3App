@@ -4,21 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#6FA19C"
+    android:background="#E0E0E0"
     android:orientation="vertical"
     android:padding="16dp"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/cart" />
+        style="@style/random"
+        android:src="@drawable/cart"
+        android:contentDescription="@string/cart_logo_desc"/>
 
     <TextView
         android:id="@+id/titleTextView"
@@ -26,8 +25,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="Welcome To Andrazon"
-        android:textColor="#E1DEDE"
+        android:text="@string/main_label"
+        android:textColor="#0072AF"
         android:textSize="22sp"
         android:textStyle="italic|bold" />
     <!-- selecting a product -->
@@ -36,37 +35,44 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#6A3131"
         android:entries="@array/product_array"
-        android:foregroundTint="#000000"
-        android:minHeight="48dp"/>
+        android:minHeight="48dp"
+        android:background="@drawable/style_dropper"
+        android:popupBackground="@drawable/spinner_back"
+        />
     <!-- selecting a payment method -->
     <Spinner
         android:id="@+id/productSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#6A3131"
         android:entries="@array/produc_array"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/style_dropper"
+        android:popupBackground="@drawable/spinner_back"
+        />
 
     <Spinner
         android:id="@+id/paymentSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#6A3131"
         android:entries="@array/payment_array"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/style_dropper"
+        android:popupBackground="@drawable/spinner_back"
+        />
     <!-- selecting a delivery method -->
     <Spinner
         android:id="@+id/deliverySpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:backgroundTint="#6A3131"
         android:entries="@array/delivery_array"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:background="@drawable/style_dropper"
+        android:popupBackground="@drawable/spinner_back"
+        />
 
     <!-- order -->
     <Button
@@ -75,8 +81,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:text="Order now"
-        android:textColor="@color/white"/>
+        android:text="@string/btn_text"
+        android:background="@null"
+        android:backgroundTint="#2A3973"/>
 
     <!-- display the order -->
     <TextView
@@ -85,9 +92,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:background="#526866"
-        android:text="Your result will show here"
-        android:textColor="#FFFCFC"
-        android:textSize="18sp" />
-
+        android:text="@string/result_label"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 </androidx.appcompat.widget.LinearLayoutCompat>
